@@ -14,7 +14,7 @@ from retrieval_contriever.passage_retrieval import embed_queries, index_encoded_
 import retrieval_contriever.src.index
 from retrieval_contriever.src.data import load_passages
 
-from agents.direct_query_llm import direct_relevant_answer
+# from agents.direct_query_llm import direct_relevant_answer
 from agents.skm_agents import run_skm_agent
 from agents.tdm_agent import run_tdm_agent
 from evaluation_st.st_direct_llm import yes_no_answer
@@ -33,14 +33,20 @@ import os
 import litellm
 # from test.test_queries import spotifyQueries
 from langchain.llms import OpenAI
+from llama_chatcom import generate_short_response,generate_short_response_with_context
+from pinecone_db import compare_query,upsert_data
+from crewai_tools import SerperDevTool
+
 
 litellm.set_verbose=True
 
 load_dotenv()
 
 openai_api = os.getenv('OPENAI_API')
+serper_api_key = os.getenv('SERPER_API_KEY')
 # os.environ['OPENAI_API'] = openai_api
 os.environ['MODEL_NAME'] = 'gpt-3.5-turbo'
+os.environ['SERPER_API_KEY'] = serper_api_key
 
 litellm.api_key = openai_api
 
@@ -49,6 +55,8 @@ os.environ['MODEL_NAME'] = 'gpt-3.5-turbo'
 os.environ['OPENAI_API_KEY'] = openai_Api_key
 
 llm = OpenAI(api_key = openai_Api_key)
+
+search_tool = SerperDevTool()
 
 # print(direct_relevant_answer('Who is babar azam'))
 
@@ -61,6 +69,7 @@ goal="""
 Evaluate the given query {query} and based on your knowledge, determine whether you have an idea or understanding of the query. 
 If you have any slightest knowledge or reasonable idea about the query, answer with 'know'. 
 If the query is entirely outside your knowledge domain or you have no idea, answer with 'not know'.
+Use search tool for time series question like question which have different answers in different time
 """,
 verbose=True,
 memory=True,
@@ -68,6 +77,7 @@ backstory=(
 """You are a Query Evaluator who is an expert in evaluating queries and determining whether you have some knowledge 
 or understanding about the topic. Answer with 'know' if you have any knowledge, otherwise answer 'not know'."""
 ),
+tools=[search_tool],
 allow_delegation=True
 )
 
@@ -346,59 +356,67 @@ def problem_solving(input, iter, contriever, contriever_tokenizer,passage_id_map
         return answer
     else:
         print('Model has no idea about it ')
-
-
-        # Perform beam retrieval (commented for simplicity)
-        m_docs, m_scores = beam_retrieve(input, contriever, contriever_tokenizer,passage_id_map,index)
-        r_docs = []
         
-        user_query = input[1]
-        print('The betrayed user query is ',user_query)
-        #splitting the data into chunks 
-        chunks = split_array_into_chunks(m_docs)
-        # filtering chunks based on similarity score 
-        print('The chunks we get are',chunks)
-        similar_chunks = filter_chunks_by_similarity_openai(chunks,user_query)
-        print('The similar chunks we get are',similar_chunks)
-        
-        if similar_chunks:
-            print('Entered into similar chunks........')
-            answer = yes_no_answer_with_context(similar_chunks, input)
-            
-            print('The answer from similar chunks are',answer)
-            
-            return str(answer)
+        #look for similary query in the vector store 
+        results = compare_query(input, bench_mark=0.75)
+        if results:
+            return results
         else:
-            print('Could not find similar chunks ')
-            # print('Entered into google chunks........')
-            # search_results = Googlesearch(user_query)
-            # answer = relevant_answer(search_results,user_query)
+            print("No similar data found...")
+
+            # Perform beam retrieval (commented for simplicity)
+            m_docs, m_scores = beam_retrieve(input, contriever, contriever_tokenizer,passage_id_map,index)
+            r_docs = []
             
-            # return answer
-        
-            # use tdm agent to split the question into sub questions 
-            sub_question = run_tdm_agent( input)
+            user_query = input[1]
+            print('The betrayed user query is ',user_query)
+            #splitting the data into chunks 
+            chunks = split_array_into_chunks(m_docs)
+            # filtering chunks based on similarity score 
+            print('The chunks we get are',chunks)
+            similar_chunks = filter_chunks_by_similarity_openai(chunks,user_query)
+            print('The similar chunks we get are',similar_chunks)
             
-            questions = re.split(r'\d+\.\s', sub_question)[1:]  # Split and ignore the first empty string
-            questions = [q.strip() for q in questions if q]  # Clean up whitespace and empty elements
-            
-            sub_qas = []
-            for i, sub_query in enumerate(questions, start=1):
-                print(f"Sub Question {i}: {sub_query}")
+            if similar_chunks:
+                print('Entered into similar chunks........')
+                #store the similary chunks with query into vector store
+                context = ' '.join(similar_chunks)
+                upsert_data(input,context)
+                answer = yes_no_answer_with_context(similar_chunks, input)
                 
-                sub_answer = problem_solving(input, iter, contriever, contriever_tokenizer,passage_id_map,index)
-                sub_qa = [sub_query, sub_answer]
-                sub_qas.append(sub_qa)
-            sub_str = ""
-            for idx, sub_qa in enumerate(sub_qas):
-                sub_str = sub_str + "\nsub_question " + idx + ": " + sub_qa[0]
-                sub_str = sub_str + "\nsub_question " + idx + ": " + sub_qa[1]
-            sub_str = sub_str + "\nBase on the sub-question answer. Provide a one-word or one-phrase answer to the original question without supporting details."
-            print(sub_str)
-            answer = llm.predict(args, input[0] + sub_str + input[1])
-            print('The answer from TDM branch is ',answer)
-            return str(answer)
+                print('The answer from similar chunks are',answer)
+                return str(answer)
+            else:
+                print('Could not find similar chunks ')
+                # print('Entered into google chunks........')
+                # search_results = Googlesearch(user_query)
+                # answer = relevant_answer(search_results,user_query)
+                
+                # return answer
             
+                # use tdm agent to split the question into sub questions 
+                sub_question = run_tdm_agent( input)
+                
+                questions = re.split(r'\d+\.\s', sub_question)[1:]  # Split and ignore the first empty string
+                questions = [q.strip() for q in questions if q]  # Clean up whitespace and empty elements
+                
+                sub_qas = []
+                for i, sub_query in enumerate(questions, start=1):
+                    print(f"Sub Question {i}: {sub_query}")
+                    
+                    sub_answer = problem_solving(input, iter, contriever, contriever_tokenizer,passage_id_map,index)
+                    sub_qa = [sub_query, sub_answer]
+                    sub_qas.append(sub_qa)
+                sub_str = ""
+                for idx, sub_qa in enumerate(sub_qas):
+                    sub_str = sub_str + "\nsub_question " + idx + ": " + sub_qa[0]
+                    sub_str = sub_str + "\nsub_question " + idx + ": " + sub_qa[1]
+                sub_str = sub_str + "\nBase on the sub-question answer. Provide a one-word or one-phrase answer to the original question without supporting details."
+                print(sub_str)
+                answer = llm.predict(args, input[0] + sub_str + input[1])
+                print('The answer from TDM branch is ',answer)
+                return str(answer)
+                
             
         
     
@@ -410,32 +428,35 @@ def run_gpt(dataset, contriever, contriever_tokenizer, passage_id_map, index):
     print('We entered into the run_gpt branch')
     answer_set = list()
     i = 0
-
+    start_time = time.time()
     # Loop through the dataset
     for idx, data in enumerate(dataset):
         try:
             print('The question asked is ', data)
             print('question no.',i)
-            input_data = data['input']
+            input_data = data['query']
             ans = problem_solving(input_data, 0, contriever, contriever_tokenizer, passage_id_map, index)
             print('Answer we get', ans)
             
             # Append the answer to the answer_set with both question and answer
             element = {
-                'question': data['input'],  # Save the question
+                'question': data['query'],  # Save the question
                 'answer': ans,                 # Save the answer
-                'expected_answer': data['target'].split(".")[0]  # Save the expected answer if exists
+                # 'expected_answer': data['target'].split(".")[0]  # Save the expected answer if exists
             }
-            output_file_path = "./answers_qa/output_st.json"
-            with open(output_file_path, 'a', encoding="UTF-8") as f:
-                f.write(json.dumps(element) + '\n')
-            answer_set.append(element)
+            # output_file_path = "./answers_qa/output_st.json"
+            # with open(output_file_path, 'a', encoding="UTF-8") as f:
+            #     f.write(json.dumps(element) + '\n')
+            # answer_set.append(element)
             
             i = i+1
 
         except Exception as e:
             print(f"Error occurred while processing question {idx}: {e}")
     
+    end_time = time.time()  # Record the end time
+    execution_time = end_time - start_time  # Calculate the time taken
+    print(f"Time taken for the loop to complete: {execution_time} seconds")
     print('Answer set we get', answer_set)
 
     # # Save the questions, answers, and expected answers to a file
@@ -460,23 +481,45 @@ if __name__ == '__main__':
     # Load the dataset
     dataset = load_dataset(args.data_path)
     
-    ###loading hotpot_qa###########
-    file_path = "./dataset/StrategyQA/StrategyQA.json"
+    # ###loading hotpot_qa###########
+    # file_path = "./dataset/StrategyQA/StrategyQA.json"
 
-    # Read the JSON file
-    with open(file_path, "r") as file:
-        data = json.load(file)
+    # # Read the JSON file
+    # with open(file_path, "r") as file:
+    #     data = json.load(file)
         
-    examples_data = data.get("examples", [])
+    # examples_data = data.get("examples", [])
 
-    # Randomly sample 500 items
-    random_sample = random.sample(examples_data, 600)
+    # # Randomly sample 500 items
+    # random_sample = random.sample(examples_data, 100)
     
-    # random_sample = random.sample(dataset, 100)
-    print(f"Dataset size: {len(dataset)}")
-    print(f"First few entries: {dataset[:5]}")
+    # # random_sample = random.sample(dataset, 100)
+    # print(f"Dataset size: {len(dataset)}")
+    # print(f"First few entries: {dataset[:5]}")
+    
+    dataset = [
+    {"query": "Who won the ICC Champions Trophy in 2017?", "answer": "Pakistan won the ICC Champions Trophy in 2017."},
+    {"query": "Which country hosted the ICC Champions Trophy in 2017?", "answer": "The ICC Champions Trophy in 2017 was hosted by England and Wales."},
+    {"query": "Which team did Pakistan defeat in the final of the 2017 ICC Champions Trophy?", "answer": "Pakistan defeated India in the final of the 2017 ICC Champions Trophy."},
+    {"query": "Who was the captain of the Indian cricket team during the 2017 ICC Champions Trophy?", "answer": "Virat Kohli was the captain of the Indian cricket team during the 2017 ICC Champions Trophy."},
+    {"query": "What was the result of the 2017 ICC Champions Trophy final?", "answer": "Pakistan won the 2017 ICC Champions Trophy final by 180 runs against India."},
+    {"query": "What is the capital of France?", "answer": "The capital of France is Paris."},
+    {"query": "Who painted the Mona Lisa?", "answer": "The Mona Lisa was painted by Leonardo da Vinci."},
+    {"query": "What is the largest planet in our solar system?", "answer": "The largest planet in our solar system is Jupiter."},
+    {"query": "Who wrote 'Romeo and Juliet'?", "answer": "William Shakespeare wrote 'Romeo and Juliet'."},
+    {"query": "What is the tallest mountain in the world?", "answer": "Mount Everest is the tallest mountain in the world."},
+    {"query": "What is the longest river in the world?", "answer": "The Nile River is the longest river in the world."},
+    {"query": "Who invented the telephone?", "answer": "The telephone was invented by Alexander Graham Bell."},
+    {"query": "What is the largest ocean on Earth?", "answer": "The Pacific Ocean is the largest ocean on Earth."},
+    {"query": "Which country is known as the Land of the Rising Sun?", "answer": "Japan is known as the Land of the Rising Sun."},
+    {"query": "What is the chemical symbol for water?", "answer": "The chemical symbol for water is H2O."},
+    {"query": "Who was the first man to walk on the moon?", "answer": "Neil Armstrong was the first man to walk on the moon."},
+    {"query": "What is the capital of Japan?", "answer": "The capital of Japan is Tokyo."},
+    {"query": "What is the hardest natural substance on Earth?", "answer": "Diamond is the hardest natural substance on Earth."},
+    {"query": "Who developed the theory of relativity?", "answer": "Albert Einstein developed the theory of relativity."},
+    {"query": "What is the smallest country in the world?", "answer": "Vatican City is the smallest country in the world."}
+    ]
 
-    
     # Load the passage ID map and index
     passage_id_map, index = load_passages_id_map()
     print('passage numbers',len(passage_id_map))
@@ -489,6 +532,6 @@ if __name__ == '__main__':
     # SKM, PRM, TDM = gpt_mdoel_init()
     
     # Call run_gpt with all required arguments
-    answer = run_gpt(random_sample, contriever, contriever_tokenizer,passage_id_map,index) #passage_id_map, index
+    answer = run_gpt(dataset, contriever, contriever_tokenizer,passage_id_map,index) #passage_id_map, index
     
     print('The final answers are: ',answer)

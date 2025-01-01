@@ -1,0 +1,502 @@
+[
+    {
+        "query": "during which time period did the third party system take place in american politics",
+        "target": "from 1854 until the mid-1890s",
+        "predicted": "1828 to 1854"
+    },
+    {
+        "query": "kasam tere pyar ki drama tanu real name",
+        "target": "Kratika Sengar",
+        "predicted": "Kratika Sengar"
+    },
+    {
+        "query": "who said if you don't eat your meat",
+        "target": "a Scottish teacher",
+        "predicted": "Roger Waters"
+    },
+    {
+        "query": "who's won the eurovision the most times",
+        "target": "Johnny Logan",
+        "predicted": "Ireland"
+    },
+    {
+        "query": "who proved that square root of 2 is irrational",
+        "target": "Pythagoreans",
+        "predicted": "Unknown"
+    },
+    {
+        "query": "who helped resolve the dispute between virginia and maryland",
+        "target": "William R. Day",
+        "predicted": "George Washington"
+    },
+    {
+        "query": "where does the chemical breakdown of food begin",
+        "target": "in the mouth",
+        "predicted": "mouth"
+    },
+    {
+        "query": "when did ty beanie babies first come out",
+        "target": "1993",
+        "predicted": "1993"
+    },
+    {
+        "query": "who was the nba championship trophy named after",
+        "target": "Larry O'Brien",
+        "predicted": "Larry O'Brien"
+    },
+    {
+        "query": "when was the 35 hour week introduced in france",
+        "target": "February 2000",
+        "predicted": "2000"
+    },
+    {
+        "query": "who sang the original version of this christmas",
+        "target": "American soul musician Donny Hathaway",
+        "predicted": "Donny Hathaway"
+    },
+    {
+        "query": "who sings back in the high life again",
+        "target": "Steve Winwood",
+        "predicted": "Stevie Winwood"
+    },
+    {
+        "query": "who plays the hero boy in polar express",
+        "target": "Daryl Sabara",
+        "predicted": "Tom Hanks"
+    },
+    {
+        "query": "what type of government system does iran have",
+        "target": "theocracy",
+        "predicted": "Islamic Republic"
+    },
+    {
+        "query": "what was first jersey shore or geordie shore",
+        "target": "Jersey Shore",
+        "predicted": "Jersey Shore"
+    },
+    {
+        "query": "where is the weg being held this year",
+        "target": "Mill Spring, North Carolina",
+        "predicted": "Tryon International Equestrian Center, near Mill Spring, North Carolina"
+    },
+    {
+        "query": "when is season 2 of a series of unfortunate events coming out on netflix",
+        "target": "early 2018",
+        "predicted": "March 30, 2018"
+    },
+    {
+        "query": "who played spider man in spider man homecoming",
+        "target": "Tom Holland",
+        "predicted": "Tom Holland"
+    },
+    {
+        "query": "when does the school year start in israel",
+        "target": "September 1",
+        "predicted": "September"
+    },
+    {
+        "query": "who is the longest serving cheif minister in india",
+        "target": "Chamling",
+        "predicted": "Jyoti Basu"
+    },
+    {
+        "query": "when do meredith and derek start dating in season 3",
+        "target": "\"I",
+        "predicted": "Episode 1"
+    },
+    {
+        "query": "statutory rape in ontario canada age of consent",
+        "target": "16",
+        "predicted": "under age 16"
+    },
+    {
+        "query": "where is the house of the rising sun located according to the animals",
+        "target": "New Orleans",
+        "predicted": "New Orleans"
+    },
+    {
+        "query": "chief guest of independence day 2018 in india",
+        "target": "President Rodrigo Roa Duterte",
+        "predicted": "None"
+    },
+    {
+        "query": "where does the word o.k. come from",
+        "target": "Oll Korrect",
+        "predicted": "\"oll korrect\""
+    },
+    {
+        "query": "where did you find the red pandas in india",
+        "target": "Assam",
+        "predicted": "The Singalila and Neora Valley National Parks"
+    },
+    {
+        "query": "what is reagan's job in new girl",
+        "target": "pharmaceutical sales rep",
+        "predicted": "Nurse"
+    },
+    {
+        "query": "who played in the nba finals in 1994",
+        "target": "New York Knicks",
+        "predicted": "Houston Rockets vs. New York Knicks"
+    },
+    {
+        "query": "what year does when the heart calls take place",
+        "target": "1910",
+        "predicted": "1910"
+    },
+    {
+        "query": "when did every light in the house is on come out",
+        "target": "August 1996",
+        "predicted": "June 25, 1996"
+    },
+    {
+        "query": "law and order svu nick amaro gets shot",
+        "target": "In \"Born Psychopath\"",
+        "predicted": "Detective Nick Amaro shoots a suspect, that turns out to be an unarmed African-American 14-year-old boy"
+    },
+    {
+        "query": "who has the most career hits in baseball",
+        "target": "Pete Rose",
+        "predicted": "Pete Rose"
+    },
+    {
+        "query": "who did ramsay kill in season 5 episode 7",
+        "target": "the old lady",
+        "predicted": "Myranda"
+    },
+    {
+        "query": "who wrote song my heart will go on",
+        "target": "Will Jennings",
+        "predicted": "Will Jennings"
+    },
+    {
+        "query": "who lived in red hook in the 1950s",
+        "target": "Norwegians",
+        "predicted": "families of dock workers"
+    },
+    {
+        "query": "how much money did it take to make wonder woman",
+        "target": "$149\u00a0million",
+        "predicted": "149 million USD"
+    },
+    {
+        "query": "when was the last time the federal minimum wage increased",
+        "target": "July 2009",
+        "predicted": "July 24, 2009"
+    },
+    {
+        "query": "who was the alabama quarterback before jalen hurts",
+        "target": "Blake Barnett",
+        "predicted": "Jacob Coker"
+    },
+    {
+        "query": "where was the first labor day celebration held",
+        "target": "September 5",
+        "predicted": "New York City"
+    },
+    {
+        "query": "where is season 5 american horror story filmed",
+        "target": "Los Angeles, California",
+        "predicted": "Los Angeles"
+    },
+    {
+        "query": "how many super bowl rings do the redskins have",
+        "target": "3",
+        "predicted": "3"
+    },
+    {
+        "query": "what is the highest rank in the marine corps",
+        "target": "General",
+        "predicted": "General"
+    },
+    {
+        "query": "who played fiyero in the original broadway cast",
+        "target": "Norbert Leo Butz",
+        "predicted": "Norbert Leo Butz"
+    },
+    {
+        "query": "who wrote the song that's how i got to memphis",
+        "target": "Tom T. Hall",
+        "predicted": "Tom T. Hall"
+    },
+    {
+        "query": "when does nathan make it to the nba",
+        "target": "season 6 finale",
+        "predicted": "Nathan finally made it to the NBA."
+    },
+    {
+        "query": "who played victoria on how i met your mother",
+        "target": "Ashley Williams Dodson",
+        "predicted": "Ashley Williams"
+    },
+    {
+        "query": "mere raske qamar song is from which movie",
+        "target": "Baadshaho",
+        "predicted": "Baazigar"
+    },
+    {
+        "query": "who plays the hot maid in american horror story",
+        "target": "Breckenridge",
+        "predicted": "Frances Conroy"
+    },
+    {
+        "query": "who is the presenter of america got talent",
+        "target": "Tyra Banks",
+        "predicted": "Tyra Banks"
+    },
+    {
+        "query": "how old do you have to.be to get a tattoo",
+        "target": "18 years or older",
+        "predicted": "18 years old"
+    },
+    {
+        "query": "who died during the riot on orange is the new black",
+        "target": "Maureen Kukudio",
+        "predicted": "Poussey"
+    },
+    {
+        "query": "who plays flores on orange is the new black",
+        "target": "Laura G\u00f3mez",
+        "predicted": "Jackie Cruz"
+    },
+    {
+        "query": "who plays the voice of sully in monsters inc",
+        "target": "John Goodman",
+        "predicted": "John Goodman"
+    },
+    {
+        "query": "what is the second part of flowers in the attic called",
+        "target": "Petals on the Wind",
+        "predicted": "Petals on the Wind"
+    },
+    {
+        "query": "who played gul dukat in deep space nine",
+        "target": "Marc Alaimo",
+        "predicted": "Marc Alaimo"
+    },
+    {
+        "query": "who sings the theme song to mary tyler moore show",
+        "target": "Sonny Curtis",
+        "predicted": "Sonny Curtis"
+    },
+    {
+        "query": "who killed the governor in the walking dead",
+        "target": "Lilly",
+        "predicted": "Michonne"
+    },
+    {
+        "query": "when was the first football world cup organised",
+        "target": "1930",
+        "predicted": "1930"
+    },
+    {
+        "query": "when did the original death wish come out",
+        "target": "1972",
+        "predicted": "1974"
+    },
+    {
+        "query": "when do roy and pam get back together",
+        "target": "\"Phyllis' Wedding\"",
+        "predicted": "during Phyllis' wedding"
+    },
+    {
+        "query": "who wrote what's so funny bout peace love and understanding",
+        "target": "Nick Lowe",
+        "predicted": "Nick Lowe"
+    },
+    {
+        "query": "who won icc t 20 world cup 2016",
+        "target": "West Indies",
+        "predicted": "West Indies"
+    },
+    {
+        "query": "where was the first documented case of polio",
+        "target": "1840",
+        "predicted": "Ancient Egypt"
+    },
+    {
+        "query": "who played the role of arjun in old mahabharat",
+        "target": "Firoz Khan",
+        "predicted": "Rajeshwari Sachdev"
+    },
+    {
+        "query": "who is on the queen is dead cover",
+        "target": "Alain Delon",
+        "predicted": "Johnny Marr"
+    },
+    {
+        "query": "who appeared on the $20 bill in 1875",
+        "target": "Alexander Hamilton",
+        "predicted": "Martha Washington"
+    },
+    {
+        "query": "who plays noah in the boy next door",
+        "target": "Ryan Guzman",
+        "predicted": "Ryan Guzman"
+    },
+    {
+        "query": "who is the girl in the we don't talk anymore video",
+        "target": "Mirella Cardoso",
+        "predicted": "Selena Gomez"
+    },
+    {
+        "query": "what does chi mean in chi st lukes",
+        "target": "Catholic Health Initiatives",
+        "predicted": "Catholic Health Initiatives"
+    },
+    {
+        "query": "which indian captain has won the maximum matches against sri lanka",
+        "target": "Virat Kohli",
+        "predicted": "Dhoni"
+    },
+    {
+        "query": "how many seasons of the magnificent seven were there",
+        "target": "two",
+        "predicted": "1"
+    },
+    {
+        "query": "who played neil on once upon a time",
+        "target": "Michael Raymond-James",
+        "predicted": "Michael Socha"
+    },
+    {
+        "query": "who is the lead singer of the black eyed peas",
+        "target": "Taboo",
+        "predicted": "will.i.am"
+    },
+    {
+        "query": "who plays the voice of dory in finding dory",
+        "target": "Lucia Geddes",
+        "predicted": "Ellen DeGeneres"
+    },
+    {
+        "query": "an existing rock that changes during metamorphism to create a metamorphic rock is called",
+        "target": "protolith",
+        "predicted": "Parent rock"
+    },
+    {
+        "query": "who is the mlb all time hits leader",
+        "target": "Pete Rose",
+        "predicted": "Pete Rose"
+    },
+    {
+        "query": "who wrote the song to the moon and back",
+        "target": "Fever Ray",
+        "predicted": "Savage Garden"
+    },
+    {
+        "query": "when is mario and luigi super star saga coming out",
+        "target": "October 6, 2017",
+        "predicted": "October 6, 2004"
+    },
+    {
+        "query": "who died in the hound of the baskervilles",
+        "target": "Sir Charles Baskerville",
+        "predicted": "Sir Charles Baskerville"
+    },
+    {
+        "query": "king arthur legend of the sword who was the mage",
+        "target": "\u00c0strid Berg\u00e8s-Frisbey",
+        "predicted": "Merlin"
+    },
+    {
+        "query": "what is the control centre of reflex action",
+        "target": "the spinal cord",
+        "predicted": "spinal cord"
+    },
+    {
+        "query": "who is the first chief minister of manipur",
+        "target": "Mairembam Koireng Singh",
+        "predicted": "Bishnu Ram Medhi"
+    },
+    {
+        "query": "what type of primary electoral system does california have",
+        "target": "nonpartisan blanket primary",
+        "predicted": "Top-two primary system"
+    },
+    {
+        "query": "who owns the wynn hotel in las vegas",
+        "target": "Wynn Resorts",
+        "predicted": "Steve Wynn"
+    },
+    {
+        "query": "who's the little girl that played in waterworld",
+        "target": "Tina Marie Majorino",
+        "predicted": "Tina Majorino"
+    },
+    {
+        "query": "when is the last time the united states had a full eclipse",
+        "target": "August 21, 2017",
+        "predicted": "2017"
+    },
+    {
+        "query": "where does the handmaid's tale take place hulu",
+        "target": "New England",
+        "predicted": "Gilead"
+    },
+    {
+        "query": "what is the mlb record for most hits in a row",
+        "target": "12",
+        "predicted": "44"
+    },
+    {
+        "query": "where was till death do us part filmed",
+        "target": "Wapping",
+        "predicted": "Maple Ridge, British Columbia, Canada"
+    },
+    {
+        "query": "what year did cadillac stop using the northstar engine",
+        "target": "2011",
+        "predicted": "2013"
+    },
+    {
+        "query": "over what land route did the bubonic plague spread from asia to europe",
+        "target": "Silk Road",
+        "predicted": "Silk Road"
+    },
+    {
+        "query": "what is the highest close of the dow jones",
+        "target": "41.22",
+        "predicted": "39,908.00 points"
+    },
+    {
+        "query": "if a team wins the fa cup do they qualify for the champions league",
+        "target": "Europa League",
+        "predicted": "Unknown"
+    },
+    {
+        "query": "what is the grand prize for winning american ninja warrior",
+        "target": "$1,000,000",
+        "predicted": "$1,000,000"
+    },
+    {
+        "query": "when was dr jekyll and mr hyde published",
+        "target": "1886",
+        "predicted": "1886"
+    },
+    {
+        "query": "who said and now the rest of the story",
+        "target": "Paul Harvey",
+        "predicted": "Paul Harvey"
+    },
+    {
+        "query": "who plays stacy in boss baby back in business",
+        "target": "Alex Cazares",
+        "predicted": "Alex Cazares"
+    },
+    {
+        "query": "when is the last time the cubs won a world series",
+        "target": "2016",
+        "predicted": "2016"
+    },
+    {
+        "query": "who composed the song sare jahan se achha hindustan hamara",
+        "target": "Muhammad Iqbal",
+        "predicted": "Allama Iqbal"
+    },
+    {
+        "query": "what type of equation includes the quantity of energy released or absorbed during the reaction",
+        "target": "Enthalpy",
+        "predicted": "Thermodynamic equation"
+    }
+]

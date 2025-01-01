@@ -19,8 +19,7 @@ Yes_No_Responder = Agent(
     goal=(
         """Answer the user's analytical query: {query}. Respond with either "yes" or "no" 
         based on your knowledge available up to 2018. Avoid providing any additional context, 
-        explanations, or supporting phrases. If you do not have enough knowledge to answer 
-        confidently within the pre-2019 context, respond with "Unknown"."""
+        explanations, or supporting phrases."""
     ),
     verbose=True,
     memory=False,

@@ -157,7 +157,7 @@
 {"question": "Would John the Baptist be invited to a hypothetical cephalophore reunion in heaven?", "answer": "No", "expected_answer": "No"}
 {"question": "Could an elephant easily defeat a male macaque?", "answer": "yes", "expected_answer": "Yes"}
 {"question": "Could eating Chinook salmon help Ryan Reynolds?", "answer": "Yes", "expected_answer": "Yes"}
-{"question": "Is Lines on the Antiquity of Microbes briefer than any haiku?", "answer": "no", "expected_answer": "Yes"}
+{"question": "Is Lines on the Antiquity of Microbes briefer than any haiku?", "answer": "no", "expected_answer": "no"}
 {"question": "Would food made with black salt smell of sulfur?", "answer": "Yes", "expected_answer": "Yes"}
 {"question": "Is a fairy more prevalent in world myths than a valkyrie?", "answer": "yes", "expected_answer": "Yes"}
 {"question": "Did Isaac's father almost commit similar crime as Marvin Gay Sr.?", "answer": "Yes", "expected_answer": "Yes"}
@@ -231,3 +231,24 @@
 {"question": "Would a German Shepherd be welcome in an airport?", "answer": "Yes", "expected_answer": "Yes"}
 {"question": "Would a Bulgarian priest eat a four-course meal on Christmas Eve?", "answer": "No", "expected_answer": "No"}
 {"question": "Did any Golden Globe winners attend John Kerry's alma mater?", "answer": "Yes", "expected_answer": "Yes"}
+{"question": "Was Martin Luther same sect as Martin Luther King Jr.?", "answer": "no", "expected_answer": "No"}
+{"question": "Is helium the cause of the Hindenburg explosion?", "answer": "no", "expected_answer": "No"}
+{"question": "Would Downton Abbey finale viewership defeat every Kazakhstan citizen in tug of war?", "answer": "no", "expected_answer": "No"}
+{"question": "Is Disneyland Paris the largest Disney resort?", "answer": "no", "expected_answer": "No"}
+{"question": "Is slitting your wrists an unreliable suicide method?", "answer": "yes", "expected_answer": "Yes"}
+{"question": "Can an art dealer buy Boeing 737-800 with a Da Vinci painting?", "answer": "yes", "expected_answer": "Yes"}
+{"question": "Has Ringo Starr been in a relatively large number of bands?", "answer": "No", "expected_answer": "No"}
+{"question": "Would the Cookie Monster decline an offer of free Keebler products?", "answer": "no", "expected_answer": "No"}
+{"question": "Was England directly involved in the Arab-Israeli conflict?", "answer": "yes", "expected_answer": "Yes"}
+{"question": "Is All Purpose Flour safe for someone who has celiac disease?", "answer": "no", "expected_answer": "No"}
+{"question": "Should spaghetti be slick when cooked?", "answer": "no", "expected_answer": "No"}
+{"question": "Would a honey badger's dentures be different from a wolverine's?", "answer": "yes", "expected_answer": "Yes"}
+{"question": "Would Hades and Osiris hypothetically compete for real estate in the Underworld?", "answer": "no", "expected_answer": "Yes"}
+{"question": "Is an ammonia fighting cleaner good for pet owners?", "answer": "No", "expected_answer": "Yes"}
+{"question": "Did Doctor Strange creators also make Batman?", "answer": "no", "expected_answer": "No"}
+{"question": "Was Saint Vincent and the Grenadines named by an Italian explorer?", "answer": "no", "expected_answer": "Yes"}
+{"question": "Can someone in Uberlandia work for Mitsubishi?", "answer": "Unknown", "expected_answer": "Yes"}
+{"question": "Can French Toast hypothetically kill a Lannister?", "answer": "Unknown", "expected_answer": "Yes"}
+{"question": "Could Christopher Nolan's movies finance Cyprus's entire GDP?", "answer": "no", "expected_answer": "No"}
+{"question": "Would a pescatarian be unable to eat anchovy pizza?", "answer": "no", "expected_answer": "No"}
+{"question": "Would Jean Harris's victim have avoided lentils?", "answer": "no", "expected_answer": "Yes"}

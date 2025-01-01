@@ -1,73 +1,43 @@
-from langchain import LLMChain, OpenAI
-import os 
+import os
+import replicate
 from dotenv import load_dotenv
-from crewai import Agent, Task, Crew, Process
-import litellm
 
 load_dotenv()
+replicate_token = os.getenv('REPLICATE_TOKEN')
 
-api_key = os.getenv('OPENAI_API')
+os.environ['REPLICATE_API_TOKEN'] = replicate_token
 
-os.environ['OPENAI_API_KEY'] = api_key
-os.environ['MODEL_NAME'] = 'gpt-3.5-turbo'
-os.environ['LITELLM_LOG'] = 'DEBUG'
-# litellm.set_verbose=True
+# Pre-prompt to enforce concise responses
+pre_prompt = (
+    "You are an assistant restricted to providing answers in only one word or a short phrase. "
+    "Strictly do not include any context, explanations, or extra words. "
+    "Only provide the direct answer without any other content."
+)
+prompt_input = "Who is the captain of Pakistan cricket team?"
 
-# Initialize the OpenAI LLM
-llm = OpenAI(api_key = api_key, temperature=0)
-
-print(llm)
-
-# Define the responder agent with pre-2019 knowledge restriction
-Short_Responder = Agent(
-    role='Short answer giver',
-    goal=(
-        """Answer the user's query: {query}. Extract **only** the exact
-        word or phrase that directly answers the query, with **no supporting phrases or extra words**.
-        **Important:** The knowledge you base your answers on must not exceed the year 2018.
-        If you do not have enough knowledge to answer confidently within the pre-2019 context, respond with 'Unknown'."""
-    ),
-    verbose=True,
-    memory=False,
-    backstory=(
-        """You are an expert answer provider, skilled in extracting precise answers
-        from knowledge and queries available only until 2018. Your answers are short and exact."""
-    ),
-    allow_delegation=True,
+# Generate LLM response
+output = replicate.run(
+    'a16z-infra/llama13b-v2-chat:df7690f1994d94e96ad9d568eac121aecf50684a0b0963b25a41cc40061269e5',  # LLM model
+    input={
+        "prompt": f"{pre_prompt}\n\nQuestion: {prompt_input}\nAnswer: ",
+        "temperature": 0.0,  # Reduce randomness
+        "top_p": 1.0,       # Prioritize highest probability tokens
+        "max_length": 20,   # Limit response length
+        "repetition_penalty": 1.2,  # Discourage repetitive responses
+    }
 )
 
-# Define the task with the temporal restriction
-Short_answering = Task(
-    description=(
-        """Analyze the user query `{query}` and provide the exact word or phrase 
-        that directly answers the query. Avoid any additional context, 
-        explanations, or supporting phrases. Only use knowledge from before 2019."""
-    ),
-    expected_output="A single word or phrase that directly answers the query, with no additional text.",
-    agent=Short_Responder,
-    allow_delegation=True,
-)
+# Extract concise output from the response
+def extract_direct_answer(full_response):
+    # Simple logic to filter the direct answer
+    for line in full_response:
+        line = line.strip()
+        if line and "Assistant:" not in line and "Sure" not in line:
+            return line.split(".")[0]  # Return the first sentence or phrase
+    return "No valid response."
 
-# Create the crew
-def direct_relevant_answer(user_query): 
-    crew = Crew(
-    agents=[Short_Responder],
-    tasks=[Short_answering],
-    verbose=True,
-    process=Process.sequential,
-    debug=True,
-    max_iterations=5,
-    )
-    result = crew.kickoff(inputs={'query': user_query})
-    
-    print('final result from agent file',result)
-    return result
+# Combine the output and process it
+final_response = extract_direct_answer("".join(output))
 
-# Example input
-query = "where did they film hot tub time machine?"
-
-# Call the function
-relevant_result = direct_relevant_answer(query)
-
-# Output the result
-print(relevant_result)
+# Print the final answer
+print(final_response)

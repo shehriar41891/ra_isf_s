@@ -36,7 +36,7 @@ def calculate_modified_em_score(predictions, ground_truths, threshold=0.8):
     return em_score
 
 # Load JSON file
-file_path = "./answers_qa/output_trivia.json"  # Replace with your file path
+file_path = "./answer_qa_llama/output_trivia.json"  # Replace with your file path
 with open(file_path, 'r') as f:
     data = [json.loads(line) for line in f]
 
@@ -45,8 +45,9 @@ predictions = [item['answer'] for item in data]
 ground_truths = [item['expected_answer'] for item in data]
 
 # Calculate Modified EM Score
-threshold = 0.7  # Set threshold for similarity
+threshold = 1 # Set threshold for similarity
 em_score = calculate_modified_em_score(predictions, ground_truths, threshold)
 
 # Print the Result
-print(f"Exact Match Score with Threshold {threshold * 100:.0f}%: {em_score:.2f}%")
+print('Score on Trivia Qa')
+print(f"Exact Match Score: {em_score:.2f}%")

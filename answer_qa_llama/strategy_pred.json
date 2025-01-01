@@ -1,0 +1,502 @@
+[
+    {
+        "query": "Are multiple Christmas Carol's named after Saints?",
+        "target": "Yes",
+        "predicted": "yes"
+    },
+    {
+        "query": "Would the top of Mount Fuji stick out of the Sea of Japan? ",
+        "target": "Yes",
+        "predicted": "no"
+    },
+    {
+        "query": "Was Nikola Tesla's home country involved in the American Civil War?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Did Brad Peyton need to know about seismology?",
+        "target": "Yes",
+        "predicted": "no"
+    },
+    {
+        "query": "Can parachuting amateurs ignore hurricane force winds bulletins?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Are Scottish people Albidosi?",
+        "target": "Yes",
+        "predicted": "no"
+    },
+    {
+        "query": "Is accountant a difficult profession for a person suffering from Dyscalculia?",
+        "target": "Yes",
+        "predicted": "no"
+    },
+    {
+        "query": "Can you make an MP3 from the Golden Gate Bridge?",
+        "target": "Yes",
+        "predicted": "no"
+    },
+    {
+        "query": "Would Library of Alexandria need less shelf space than Library of Congress?",
+        "target": "Yes",
+        "predicted": "yes"
+    },
+    {
+        "query": "Can Vice President of the United States kill with impunity?",
+        "target": "Yes",
+        "predicted": "no"
+    },
+    {
+        "query": "Would Garfield like canid food?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Is a Boeing 737 cost covered by Wonder Woman (2017 film) box office receipts?",
+        "target": "Yes",
+        "predicted": "yes"
+    },
+    {
+        "query": "Does title of Van Morrison's most played song apply to a minority of women worldwide?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Can a Muslim eat a McRib sandwich?",
+        "target": "No",
+        "predicted": "Unknown"
+    },
+    {
+        "query": "Is the average bulk carrier ideal for transporting bromine at room temperature?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Did Disney's second film rip off a prophet story?",
+        "target": "Yes",
+        "predicted": "no"
+    },
+    {
+        "query": "Did the population of the Warsaw Ghetto record secret police on cell phones?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Have any members of the 2020 British royal family allegedly committed a felony?",
+        "target": "Yes",
+        "predicted": "no"
+    },
+    {
+        "query": "Does  Lionel Richie believe in holistic medicine?",
+        "target": "Yes",
+        "predicted": "yes"
+    },
+    {
+        "query": "Did land owners elect their rulers in the Kingdom of Hungary?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Could the Dominican Order hypothetically defeat Blessed Gerard's order?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Could Durian cause someone's stomach to feel unwell?",
+        "target": "Yes",
+        "predicted": "yes"
+    },
+    {
+        "query": "Did Irish mythology inspire Washington Irving?",
+        "target": "Yes",
+        "predicted": "no"
+    },
+    {
+        "query": "Do most middle class families have butlers?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Should Peter Griffin be an expert at the craft of brewing?",
+        "target": "Yes",
+        "predicted": "no"
+    },
+    {
+        "query": "Is Cantonese spoken in Japan?",
+        "target": "No",
+        "predicted": "yes"
+    },
+    {
+        "query": "Would a Yeti be likely to have prehensile limbs?",
+        "target": "Yes",
+        "predicted": "no"
+    },
+    {
+        "query": "Walt Disney dominated his amusement park peers at Academy Awards?",
+        "target": "Yes",
+        "predicted": "yes"
+    },
+    {
+        "query": "Would a responsible bartender make a drink for Millie Bobby Brown?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Do some religions look forward to armageddon?",
+        "target": "Yes",
+        "predicted": "yes"
+    },
+    {
+        "query": "Did Sugar Ray Robinson win a fight against Canelo Alvarez?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Could Elizabeth I of England have seen the play Dido, Queen of Carthage ?",
+        "target": "Yes",
+        "predicted": "yes"
+    },
+    {
+        "query": "Would an aerodynamic cactus benefit from more frequently closed stomata?",
+        "target": "Yes",
+        "predicted": "yes"
+    },
+    {
+        "query": "Does the Red Sea have biblical significance? ",
+        "target": "Yes",
+        "predicted": "yes"
+    },
+    {
+        "query": "Do Australians ride Kangaroos to work?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Did Evander Holyfield compete in an Olympics hosted in the western hemisphere?",
+        "target": "Yes",
+        "predicted": "yes"
+    },
+    {
+        "query": "Would a crocodile survive longer in Great Salt Lake than alligator?",
+        "target": "Yes",
+        "predicted": "no"
+    },
+    {
+        "query": "Did The Who have to cancel tours due to World War II?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Is the United States the largest exporter of Fair Trade products?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Can you see the Statue of Freedom from the Statue of Liberty?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Is winter associated with hot temperatures?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Do drummers need spare strings?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Do Christians anticipate an existence in Sheol after death?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Would the United States Military Academy reject an applicant with multiple sclerosis?",
+        "target": "Yes",
+        "predicted": "yes"
+    },
+    {
+        "query": "Are more watermelons grown in Brazil than Antarctica?",
+        "target": "Yes",
+        "predicted": "yes"
+    },
+    {
+        "query": "Is dyslexia the most common intellectual disability in US?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Do tourists prefer Tuvalu to Niue?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Could a Jujutsu expert hypothetically defeat a Janissary?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Is Mark Cuban able to visit Northern Mariana Islands without a passport?",
+        "target": "Yes",
+        "predicted": "no"
+    },
+    {
+        "query": "Could Edward Snowden have visited the headquarters of United Nations Conference on Trade and Development?",
+        "target": "Yes",
+        "predicted": "no"
+    },
+    {
+        "query": "Would a honey badger fit inside an oven?",
+        "target": "Yes",
+        "predicted": "yes"
+    },
+    {
+        "query": "Would Phineas and Ferb enjoy winter?",
+        "target": "No",
+        "predicted": "yes"
+    },
+    {
+        "query": "Did the crew of Apollo 15 take pictures of Mount Sharp?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Would a Dodo hypothetically tower over Ma Petite?",
+        "target": "Yes",
+        "predicted": "yes"
+    },
+    {
+        "query": "Are some chiropractic manipulations dangerous?",
+        "target": "Yes",
+        "predicted": "Yes"
+    },
+    {
+        "query": "Is week old chlorine water safe to drink?",
+        "target": "Yes",
+        "predicted": "no"
+    },
+    {
+        "query": "Could an American confuse breakfast in British cuisine for dinner?",
+        "target": "Yes",
+        "predicted": "yes"
+    },
+    {
+        "query": "Did Eddie Murphy's father see his first stand up show?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Is Batman (1989 film) likely to be shown on flight from NY to Kansas City?",
+        "target": "Yes",
+        "predicted": "no"
+    },
+    {
+        "query": "Would JPEG be a good format for saving an image of Da Vinci's Vitruvian Man?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Does The Hague border multiple bodies of water?",
+        "target": "No",
+        "predicted": "yes"
+    },
+    {
+        "query": "Are any minor league baseball teams named after felines?",
+        "target": "Yes",
+        "predicted": "yes"
+    },
+    {
+        "query": "At midnight in Times Square on New Years Eve, are you likely to meet people in diapers?",
+        "target": "Yes",
+        "predicted": "yes"
+    },
+    {
+        "query": "Are all limbs required for jujutsu?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Does Disney's Alice in Wonderland involve the celebration of a holiday?",
+        "target": "Yes",
+        "predicted": "no"
+    },
+    {
+        "query": "Does the United States Navy create radioactive waste?",
+        "target": "Yes",
+        "predicted": "yes"
+    },
+    {
+        "query": "Will Elijah Cummings cast a vote in the 2020 presidential election?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Did the phone Alexander Graham Bell use have call waiting?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Is purchasing food for a Lolcat unnecessary?",
+        "target": "Yes",
+        "predicted": "yes"
+    },
+    {
+        "query": "Is euphoria associated with drug addiction?",
+        "target": "Yes",
+        "predicted": "yes"
+    },
+    {
+        "query": "Is Bern located east of Paris?",
+        "target": "Yes",
+        "predicted": "no"
+    },
+    {
+        "query": "Did Jesus know anyone who spoke Estonian?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Can you order an Alfa Romeo at Starbucks?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Would a northern fur seal pass a driving test?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Is starving Hamas agent eating pig bad?",
+        "target": "No",
+        "predicted": "yes"
+    },
+    {
+        "query": "Are queen bees unnecessary for growing apples?",
+        "target": "Yes",
+        "predicted": "no"
+    },
+    {
+        "query": "Is \"A Tale of Two Cities\" a parody of the Bible?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Could an NBA game be completed within the span of the Six-Day War?",
+        "target": "Yes",
+        "predicted": "yes"
+    },
+    {
+        "query": "Will Queen Elizabeth be buried in the Pantheon?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Did Ice make people rich?",
+        "target": "Yes",
+        "predicted": "no"
+    },
+    {
+        "query": "Did Heracles famous labors exceed a baker's dozen?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Have the Israelis played the Hammerstein Ballroom?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Hypothetically, will an African elephant be crushed by Hulk on its back?",
+        "target": "No",
+        "predicted": "yes"
+    },
+    {
+        "query": "Does the cuisine of Hawaii embrace foods considered gross in the continental US?",
+        "target": "Yes",
+        "predicted": "no"
+    },
+    {
+        "query": "Can a sesame seed grow in the human body?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Would a physician be unlikely to recommend Reiki?",
+        "target": "Yes",
+        "predicted": "yes"
+    },
+    {
+        "query": "Did Rosalind Franklin contribute to work that led to Whole Genome Sequencing?",
+        "target": "Yes",
+        "predicted": "no"
+    },
+    {
+        "query": "Does frost mean that it will be a snowy day?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Is there a Marvel villain with the same name as a kind of citrus fruit?",
+        "target": "Yes",
+        "predicted": "yes"
+    },
+    {
+        "query": "Is the rise of agriculture attributed to rivers?",
+        "target": "Yes",
+        "predicted": "yes"
+    },
+    {
+        "query": "Would Lord Voldemort hypothetically be an effective fighter after Final Fantasy silence is cast?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Are quadrupeds represented on Chinese calendar?",
+        "target": "Yes",
+        "predicted": "yes"
+    },
+    {
+        "query": "Did Native American tribes teach Spaniards how to cultivate maize?",
+        "target": "Yes",
+        "predicted": "yes"
+    },
+    {
+        "query": "Is it possible that June got its name from mythology?",
+        "target": "Yes",
+        "predicted": "yes"
+    },
+    {
+        "query": "Do hamsters provide food for any animals?",
+        "target": "Yes",
+        "predicted": "no"
+    },
+    {
+        "query": "Did Boris Yeltsin watch the 2008 Summer Olympics?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Are deaf people left out of enjoying music?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Do oak trees have leaves during winter?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Are Chipotle Cinnamon Pork Chops appropriate for a Seder?",
+        "target": "No",
+        "predicted": "no"
+    },
+    {
+        "query": "Does the Eighth Amendment to the United States Constitution protect freedom of speech?",
+        "target": "No",
+        "predicted": "no"
+    }
+]
